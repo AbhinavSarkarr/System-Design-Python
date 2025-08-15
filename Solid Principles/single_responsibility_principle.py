@@ -101,7 +101,7 @@ class JournalWithPersistence:
     def __str__(self):
         return '\n'.join(self.entries)
 
-    # ❌ SRP Violation: These belong to a separate class!
+    # SRP Violation: These belong to a separate class!
     def save(self, filename):
         with open(filename, 'w') as file:
             file.write(str(self))
